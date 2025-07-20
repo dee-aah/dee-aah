@@ -11,32 +11,13 @@
 
 ###
 
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="30" alt="php logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="30" alt="tailwindcss logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="30" alt="bootstrap logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" height="30" alt="laravel logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="30" alt="docker logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" height="30" alt="canva logo"  />
-</div>
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,java,php,bootstrap,tailwind,laravel,npm,docker,mysql,postgres,redis,mongodb,vscode,github,linux,ubuntu,powershell,figma,ai,chatgpt,gemini,flutter&perline=10)](https://skillicons.dev)
+
 ###
 
 <h4 align="left">My Sosial Media</h4>
-###
 
+### 
 
 <div align="left">
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo"  />
@@ -56,12 +37,18 @@
 ![dee-aah's GitHub stats](https://github-readme-stats.vercel.app/api?username=dee-aah&theme=github_dark&show_icons=true)
 
 ###
+<h4 align="left">My Music</h4>
+
+###
 
 <div align="center">
   <a href="https://open.spotify.com/user/31vfoze7k6xbo4co22xipaxtllkm">
     <img src="https://spotify-recently-played-readme.vercel.app/api?user=31vfoze7k6xbo4co22xipaxtllkm&count=5&unique=true" alt="Spotify recently played"  />
   </a>
 </div>
+
+###
+<h4 align="left">My Push</h4>
 
 ###
 
