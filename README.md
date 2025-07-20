@@ -54,7 +54,6 @@
 
 <img src="https://raw.githubusercontent.com/dee-aah/dee-aah/output/snake.svg" alt="Snake animation" />
 
-
 ###
 
 <picture>
