@@ -32,11 +32,9 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" height="30" alt="canva logo"  />
 </div>
-
 ###
 
 <h4 align="left">My Sosial Media</h4>
-
 ###
 
 
@@ -51,13 +49,11 @@
 </div>
 
 ###
-
 <h4 align="left">My Statistik</h4>
 
-### 
-<div align="center">
-<a href="https://github-readme-stats.vercel.app/api?username=dee-aah&theme=github_dark&show_icons=true" />
-</div>
+###
+
+![dee-aah's GitHub stats](https://github-readme-stats.vercel.app/api?username=dee-aah&theme=github_dark&show_icons=true)
 
 ###
 
