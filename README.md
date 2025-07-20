@@ -1,6 +1,5 @@
 
 ![dee-aah](img/github-header-image%20(1).png)
-<h1 align="left">Hey 👋 What's up?</h1>
 
 ###
 
@@ -8,7 +7,7 @@
 
 ###
 
-<h2 align="left">I Code With</h2>
+<h4 align="left">I Code With</h4>
 
 ###
 
@@ -33,8 +32,11 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" height="40" alt="canva logo"  />
 </div>
-
 ###
+
+<h4 align="left">My Sosial Media</h4>
+###
+
 
 <div align="left">
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo"  />
