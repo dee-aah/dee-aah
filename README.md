@@ -1,6 +1,6 @@
 
 ![dee-aah](img/github-header-image%20(1).png)
-<h2 align="left">Hey 👋 What's up?</h2>
+<h1 align="left">Hey 👋 What's up?</h1>
 
 ###
 
@@ -8,7 +8,7 @@
 
 ###
 
-<h4 align="left">I Code With</h4>
+<h2 align="left">I Code With</h2>
 
 ###
 
@@ -36,10 +36,6 @@
 
 ###
 
-<h4 align="left">My Sosial media</h4>
-
-###
-
 <div align="left">
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo"  />
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/facebook/default.svg" width="52" height="40" alt="facebook logo"  />
@@ -51,6 +47,7 @@
 </div>
 
 ###
+
 <div align="center">
   <a href="https://open.spotify.com/user/31vfoze7k6xbo4co22xipaxtllkm">
     <img src="https://spotify-recently-played-readme.vercel.app/api?user=31vfoze7k6xbo4co22xipaxtllkm&count=5&unique=true" alt="Spotify recently played"  />
