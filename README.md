@@ -51,11 +51,9 @@
 <h4 align="left">My Push</h4>
 
 ###
-
 <img src="https://raw.githubusercontent.com/dee-aah/dee-aah/output/snake.svg" alt="Snake animation" />
 
 ###
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dee-aah/dee-aah/output/pacman-contribution-graph-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dee-aah/dee-aah/output/pacman-contribution-graph.svg">
