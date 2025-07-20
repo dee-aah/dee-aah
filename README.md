@@ -1,5 +1,5 @@
 
-![dee-aah](img/github-header-image%20(4).png)
+![dee-aah](img/github-header-image%20(1).png)
 <h2 align="left">Hey 👋 What's up?</h2>
 
 ###
@@ -51,23 +51,22 @@
 </div>
 
 ###
-![Alt text](https://spotify-recently-played-readme.vercel.app/api?user=31vfoze7k6xbo4co22xipaxtllkm&count={count})
 <div align="center">
-  <img src="https://spotify-recently-played-readme.vercel.app/api?count=5" alt="Spotify recently played"  />
+  <a href="https://open.spotify.com/user/31vfoze7k6xbo4co22xipaxtllkm">
+    <img src="https://spotify-recently-played-readme.vercel.app/api?user=31vfoze7k6xbo4co22xipaxtllkm&count=5&unique=true" alt="Spotify recently played"  />
+  </a>
 </div>
 
 ###
 
-<div align="center" style="width: 100%">
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/0">
-    <img style="width: 100%" src="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/0" alt="Medium post 1"  />
-  </a>
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/1">
-    <img style="width: 100%" src="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/1" alt="Medium post 2"  />
-  </a>
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/2">
-    <img style="width: 100%" src="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/2" alt="Medium post 3"  />
-  </a>
-</div>
+<img src="https://raw.githubusercontent.com/dee-aah/dee-aah/output/snake.svg" alt="Snake animation" />
+
+###
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dee-aah/dee-aah/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/dee-aah/dee-aah/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/dee-aah/dee-aah/output/pacman-contribution-graph.svg">
+</picture>
 
 ###
