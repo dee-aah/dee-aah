@@ -1,5 +1,5 @@
-
-<h1 align="left">Hey 👋 What's up?</h1>
+![img](img/github-header-image%20(3).png)
+<h2 align="left">Hey 👋 What's up?</h2>
 
 ###
 
@@ -7,7 +7,7 @@
 
 ###
 
-<h2 align="left">I Code With</h2>
+<h4 align="left">I Code With</h4>
 
 ###
 
@@ -32,6 +32,10 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" height="40" alt="canva logo"  />
 </div>
+
+###
+
+<h4 align="left">My Sosial media</h4>
 
 ###
 
