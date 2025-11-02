@@ -11,7 +11,7 @@
 
 ###
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,java,py,php,bootstrap,tailwind,laravel,npm,docker,mysql,postgres,redis,mongodb,vscode,github,linux,ubuntu,powershell,figma,ai&perline=19)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,php,bootstrap,tailwind,laravel,npm,docker,mysql,postgres,redis,mongodb,vscode,github,linux,ubuntu,powershell,figma,ai&perline=19)](https://skillicons.dev)
 
 ###
 
