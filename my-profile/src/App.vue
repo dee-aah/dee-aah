@@ -1,25 +1,20 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import { supabase } from './supabase'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import Main from '@/layouts/Main.vue'
+import Empty from '@/layouts/Empty.vue'
 
+const route = useRoute()
+const layout = computed(() =>
+  route.meta.layout === 'empty' ? Empty : Main
+)
 console.log(supabase)
+
 </script>
 
 <template>
-  <router-view />
+  <component :is="layout">
+    <router-view />
+  </component>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>

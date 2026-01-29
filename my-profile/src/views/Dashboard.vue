@@ -1,6 +1,9 @@
 <template>
-  <div class="min-h-screen bg-gray-100 flex">
-    <!-- SIDEBAR -->
+
+
+
+  <!-- <div class="min-h-screen bg-gray-100 flex">
+    
     <aside class="hidden md:flex w-64 bg-gray-900 text-white flex-col">
       <div class="p-6 text-2xl font-bold border-b border-gray-800">
         MyProfile
@@ -18,17 +21,17 @@
       </button>
     </aside>
 
-    <!-- MAIN -->
+  
     <main class="flex-1">
-      <!-- HEADER -->
+      
       <header class="bg-white shadow px-6 py-4 flex justify-between items-center">
         <h1 class="text-xl font-semibold">Dashboard</h1>
         <span class="text-gray-600">{{ profile?.email }}</span>
       </header>
 
-      <!-- CONTENT -->
+     
       <section class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- PROFILE CARD -->
+        
         <div class="bg-white rounded-xl shadow p-6 col-span-1">
           <div class="flex items-center space-x-4">
             <div class="w-14 h-14 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xl font-bold">
@@ -41,7 +44,7 @@
           </div>
         </div>
 
-        <!-- STAT CARDS -->
+        
         <div class="bg-white rounded-xl shadow p-6">
           <h4 class="text-gray-500">Projects</h4>
           <p class="text-3xl font-bold">12</p>
@@ -53,40 +56,41 @@
         </div>
       </section>
     </main>
-  </div>
+  </div> -->
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from 'vue'
-import { supabase } from '../supabase'
-import { useRouter } from 'vue-router'
+// import { ref, onMounted, computed } from 'vue'
+// import { supabase } from '../supabase'
+// import { useRouter } from 'vue-router'
 
-const router = useRouter()
-const profile = ref(null)
+// const router = useRouter()
+// const profile = ref(null)
 
-const avatar = computed(() =>
-  profile.value?.name ? profile.value.name.charAt(0).toUpperCase() : 'U'
-)
+// const avatar = computed(() =>
+//   profile.value?.name ? profile.value.name.charAt(0).toUpperCase() : 'U'
+// )
 
-onMounted(async () => {
-  const { data: { user } } = await supabase.auth.getUser()
+// onMounted(async () => {
+//   const { data: { user } } = await supabase.auth.getUser()
 
-  if (!user) {
-    router.push('/login')
-    return
-  }
+//   if (!user) {
+//     router.push('/login')
+//     return
+//   }
 
-  const { data } = await supabase
-    .from('profiles')
-    .select('*')
-    .eq('id', user.id)
-    .single()
+//   const { data } = await supabase
+//     .from('profiles')
+//     .select('*')
+//     .eq('id', user.id)
+//     .single()
 
-  profile.value = data
-})
+//   profile.value = data
+// })
 
-const logout = async () => {
-  await supabase.auth.signOut()
-  router.push('/login')
-}
+// const logout = async () => {
+//   await supabase.auth.signOut()
+//   router.push('/login')
+// }
+// import Sidebar from '@/components/sidebar.vue'
 </script>

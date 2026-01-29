@@ -5,15 +5,23 @@ import Dashboard from '../views/Dashboard.vue'
 import { supabase } from '../supabase'
 
 const routes = [
-  { path: '/', redirect: '/dashboard' },
-  { path: '/login', component: Login },
-  { path: '/register', component: Register },
+  
   {
-    path: '/dashboard',
-    component: Dashboard,
-    meta: { requiresAuth: true },
+    path: '/login',
+    component: Login,
+    meta: { layout: 'empty' } 
   },
+  {
+    path: '/register',
+    component: Register,
+    meta: { layout: 'empty' } 
+  },
+  {
+    path: '/home',
+    component: () => import('@/views/Home.vue')
+  }
 ]
+
 
 const router = createRouter({
   history: createWebHistory(),
