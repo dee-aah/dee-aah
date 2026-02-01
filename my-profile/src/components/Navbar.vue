@@ -1,14 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-
 const isMenuOpen = ref(false)
 const isDark = ref(false)
 
 const navigation = [
-    { name: 'Beranda', href: '#home', current: true },
-    { name: 'Tentang', href: '#about', current: false },
-    { name: 'Portofolio', href: '#portfolio', current: false },
-    { name: 'Kontak', href: '#contact', current: false },
+    { name: 'Home', href: '#home', current: true },
+    { name: 'About Me', href: '#about', current: false },
+    { name: 'Portofolio', href: '/Portfolio', current: false },
+    { name: 'Contact', href: '#contact', current: false },
 ]
 
 // Fungsi Toggle Menu Mobile
@@ -52,7 +51,7 @@ onMounted(() => {
                         P
                     </div>
                     <span class="font-bold text-xl tracking-tight text-gray-800 dark:text-white transition-colors">
-                        Profil<span class="text-blue-600 dark:text-blue-400">Ku</span>
+                        My<span class="text-blue-600 dark:text-blue-400">Profile</span>
                     </span>
                 </div>
 
@@ -79,11 +78,6 @@ onMounted(() => {
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
-                    </button>
-
-                    <button
-                        class="bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 px-5 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 active:scale-95 shadow-md">
-                        Hire Me
                     </button>
                 </div>
 
