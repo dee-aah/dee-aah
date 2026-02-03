@@ -1,13 +1,13 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref,  onMounted} from 'vue'
 const isMenuOpen = ref(false)
 const isDark = ref(false)
-
+const activeSection = ref('Home','About','Portfolio')
 const navigation = [
-    { name: 'Home', href: '#home', current: true },
-    { name: 'About Me', href: '#about', current: false },
-    { name: 'Portofolio', href: '/Portfolio', current: false },
-    { name: 'Contact', href: '#contact', current: false },
+    { name: 'Home', href: '/Home' },
+    { name: 'About Me', href: '/About' },
+    { name: 'Portofolio', href: '/Portfolio' },
+    { name: 'Contact', href: '/Contact' },
 ]
 
 // Fungsi Toggle Menu Mobile
@@ -17,15 +17,48 @@ function toggleMenu() {
 
 // Fungsi Toggle Dark Mode
 function toggleTheme() {
-    isDark.value = !isDark.value
-    if (isDark.value) {
-        document.documentElement.classList.add('dark')
-        localStorage.setItem('theme', 'dark')
-    } else {
-        document.documentElement.classList.remove('dark')
-        localStorage.setItem('theme', 'light')
-    }
+  isDark.value = !isDark.value
+  if (isDark.value) {
+    document.documentElement.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+  }
 }
+
+// --- LOGIKA ACTIVE SCROLL ---
+let observer = null
+
+onMounted(() => {
+  // 1. Cek Theme saat load
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    isDark.value = true
+    document.documentElement.classList.add('dark')
+  }
+
+  // 2. Setup Intersection Observer
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // Jika section terlihat di layar (lebih dari 50%)
+      if (entry.isIntersecting) {
+        activeSection.value = entry.target.id
+      }
+    })
+  }, { 
+    threshold: 0.6 // Ganti section aktif jika 60% konten section terlihat
+  })
+
+  // 3. Pasang observer ke setiap section berdasarkan ID di navigasi
+  navigation.forEach((item) => {
+    const sectionId = item.href.replace('#', '') // ambil id tanpa tanda pagar
+    const section = document.getElementById(sectionId)
+    if (section) {
+      observer.observe(section)
+    }
+  })
+})
+
 
 // Cek preferensi saat website dimuat
 onMounted(() => {
@@ -37,6 +70,7 @@ onMounted(() => {
         document.documentElement.classList.remove('dark')
     }
 })
+
 </script>
 
 <template>
@@ -58,9 +92,9 @@ onMounted(() => {
                 <div class="hidden md:flex space-x-8 items-center">
                     <a v-for="item in navigation" :key="item.name" :href="item.href"
                         class="text-sm font-medium transition-colors duration-200" :class="[
-                            item.current
-                                ? 'text-blue-600 dark:text-blue-400 font-bold'
-                                : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                            activeSection === item.href.replace('/', '')
+                                ? 'text-blue-600 dark:text-blue-400 font-bold' // Style Aktif
+                                : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400' // Style Tidak Aktif
                         ]">
                         {{ item.name }}
                     </a>
@@ -121,11 +155,11 @@ onMounted(() => {
                 class="md:hidden bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-lg">
                 <div class="px-4 pt-2 pb-6 space-y-2">
                     <a v-for="item in navigation" :key="item.name" :href="item.href"
-                        class="block px-3 py-3 rounded-md text-base font-medium transition-colors" :class="[
-                            item.current
-                                ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
-                                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
-                        ]" @click="isMenuOpen = false">
+                        class="block px-3 py-3 rounded-md text-base font-medium transition-colors" :class="[ 
+              activeSection === item.href.replace('/', '') 
+                ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400' 
+                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800' 
+            ]" @click="isMenuOpen = false">
                         {{ item.name }}
                     </a>
                     <div class="pt-4 mt-4 border-t border-gray-100 dark:border-gray-800">

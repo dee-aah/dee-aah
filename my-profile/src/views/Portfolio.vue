@@ -2,24 +2,24 @@
 import { ref, computed } from 'vue'
 
 // 1. Data Kategori
-const categories = ['Semua', 'Web Dev', 'Data Analysis', 'Mobile Apps']
+const categories = ['Semua', 'Web Dev', 'Data Analysis',]
 const activeCategory = ref('Semua')
 
 // 2. Data Proyek (Sesuaikan dengan proyek nyata Anda)
 const projects = [
   {
     id: 1,
-    title: 'Sistem Informasi Geografis (SIG)',
+    title: 'Web Profil DPPKBP3A Kota Tasikmalaya',
     category: 'Web Dev',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'Aplikasi pemetaan daerah rawan banjir menggunakan Laravel dan LeafletJS dengan database PostgreSQL.',
-    tech: ['Laravel', 'PostgreSQL', 'LeafletJS'],
+    image: '/Laporan KP.png',
+    description: 'Website DPPKBP3A Kota Tasikmalaya menggunakan Laravel  dengan database MySQL.',
+    tech: ['Laravel', 'Tailwind', 'MySQL', 'Docker', 'NginX'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/dee-aah/diskominfo.git'
   },
   {
     id: 2,
-    title: 'Analisis Sentimen Instagram',
+    title: 'Analisis Sentimen',
     category: 'Data Analysis',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     description: 'Model NLP untuk menganalisis sentimen publik terhadap kebijakan pemerintah menggunakan Python dan TensorFlow.',
@@ -29,23 +29,23 @@ const projects = [
   },
   {
     id: 3,
-    title: 'E-Commerce Aquascape',
+    title: 'Web Rental Mobil',
     category: 'Web Dev',
-    image: 'https://images.unsplash.com/photo-1522276498395-f4f68f7f8a9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    description: 'Platform jual beli perlengkapan aquascape dengan fitur payment gateway Midtrans dan notifikasi WhatsApp.',
-    tech: ['Vue.js', 'Express', 'MySQL'],
+    image: 'rengo.jpeg',
+    description: 'Platform Jasa Rental Mobil',
+    tech: ['Laravel', 'Bootstrap','Docker', 'MySQL', 'NginX'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/dee-aah/web-rental.git'
   },
   {
     id: 4,
-    title: 'Dashboard Kepegawaian',
+    title: 'Sistem Informasi Keuangan BMKG',
     category: 'Web Dev',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     description: 'Sistem manajemen data pegawai pemerintah dengan fitur laporan PDF dan Excel otomatis.',
-    tech: ['Laravel', 'Bootstrap', 'Chart.js'],
+    tech: ['PHP', 'Bootstrap', 'MySQL','Xampp'],
     demoLink: '#',
-    repoLink: '#'
+    repoLink: 'https://github.com/dee-aah/sistem-informasi-.git'
   },
   {
     id: 5,

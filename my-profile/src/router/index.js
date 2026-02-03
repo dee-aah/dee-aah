@@ -5,6 +5,7 @@ import Dashboard from '../views/Dashboard.vue'
 import { supabase } from '../supabase'
 import { DotLottie } from '@lottiefiles/dotlottie-web';
 
+
 const routes = [
   
   {
@@ -24,6 +25,14 @@ const routes = [
   {
     path: '/Portfolio',
     component: () => import('@/views/Portfolio.vue')
+  },
+  {
+    path: '/About',
+    component: () => import('@/views/About.vue')
+  },
+  {
+    path: '/Contact',
+    component: () => import('@/views/Contact.vue')
   }
 ]
 

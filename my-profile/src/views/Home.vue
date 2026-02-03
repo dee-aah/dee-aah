@@ -36,7 +36,6 @@ function handleTyping() {
 onMounted(() => {
   handleTyping()
 })
-// ---------------------------------
 </script>
 
 <template>
@@ -81,7 +80,7 @@ onMounted(() => {
           </div>
 
           <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#portfolio"
+            <a href="/Portfolio"
               class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full shadow-lg shadow-blue-500/30 transition-all transform hover:-translate-y-1">
               Lihat Portofolio
             </a>
@@ -92,7 +91,7 @@ onMounted(() => {
           </div>
 
           <div class="pt-8 border-t border-gray-200 dark:border-gray-800">
-            <p class="text-sm text-gray-500 mb-4">Tech Stack Favorit:</p>
+            <p class="text-sm text-gray-500 mb-4">Tech Favorit :</p>
             <div
               class="flex gap-6 justify-center lg:justify-start opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
               <img width="30" height="30" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
