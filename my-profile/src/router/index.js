@@ -5,8 +5,10 @@ import Dashboard from '../views/Dashboard.vue'
 import { supabase } from '../supabase'
 import { DotLottie } from '@lottiefiles/dotlottie-web';
 import Main from '../layouts/Main.vue'
+import Messages from '../views/Messages.vue'
+import Finance from '../views/Finance.vue' 
 
-
+  
 const routes = [
   
   {
@@ -30,7 +32,6 @@ const routes = [
   {
     path: '/About',
     component: () => import('@/views/About.vue'),
-    meta :{layout : Main}
   },
   {
     path: '/Contact',
@@ -42,8 +43,27 @@ const routes = [
             requiresAuth: true,
             layout : 'Dashboard'
           } 
-  }
+  },
+  {
+    path: '/messages',
+    name: 'Messages',
+    component: Messages, 
+    meta: { 
+            requiresAuth: true,
+            layout : 'Dashboard'
+          } 
+  },
+{
+    path: '/finance',
+    name: 'Finance',
+    component: Finance,
+    meta: { 
+      requiresAuth: true, 
+      layout: 'Dashboard' 
+    }
+  },
 ]
+
 
 
 const router = createRouter({

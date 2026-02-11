@@ -64,7 +64,7 @@ onMounted(() => {
 <template>
   
 
-      <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 dark:bg-gray-900 p-6">
+      <main class="flex-1 overflow-x-hidden overflow-y-auto  dark:bg-gray-900 p-6">
         
         <div class="mb-8">
           <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Dashboard Overview</h3>
