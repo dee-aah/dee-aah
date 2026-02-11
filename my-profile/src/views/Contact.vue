@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { supabase } from '../supabase'
 
 const form = ref({
     name: '',
@@ -9,20 +10,43 @@ const form = ref({
 
 const isSubmitting = ref(false)
 
-const sendMessage = () => {
-    // Simulasi pengiriman pesan
+const sendMessage = async () => {
+    // Validasi sederhana
+    if (!form.value.name || !form.value.email || !form.value.message) {
+        alert('Harap isi semua kolom!')
+        return
+    }
     isSubmitting.value = true
-    setTimeout(() => {
-        alert(`Terima kasih, ${form.value.name}! Pesan Anda telah "terkirim" (demo).`)
-        form.value = { name: '', email: '', message: '' }
+
+    try {
+        const { error } = await supabase
+            .from('contacts')
+            .insert([
+                {
+                    name: form.value.name,
+                    email: form.value.email,
+                    message: form.value.message
+                }
+            ])
+
+        if (error) throw error
+
+        // Jika sukses
+        alert('Pesan berhasil dikirim! Terima kasih.')
+        form.value = { name: '', email: '', message: '' } // Reset form
+
+    } catch (error) {
+        console.error('Error:', error.message)
+        alert('Gagal mengirim pesan: ' + error.message)
+    } finally {
         isSubmitting.value = false
-    }, 1500)
+    }
 }
 </script>
 
 <template>
     <section id="contact"
-        class="relative py-10 bg-gray-50 dark:bg-gray-900 overflow-hidden transition-colors duration-300">
+        class="relative py-20 bg-gray-50 dark:bg-gray-900 overflow-hidden transition-colors duration-300">
 
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
             <div class="absolute top-20 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -30,24 +54,19 @@ const sendMessage = () => {
         </div>
 
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
             <div class="text-center mb-16">
-                <h2 class="text-blue-600 dark:text-blue-400 font-semibold tracking-wide uppercase text-sm mb-2">
-                    Hubungi Saya
-                </h2>
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                    Mari Bekerja Sama
-                </h1>
+                <h2 class="text-blue-600 dark:text-blue-400 font-semibold tracking-wide uppercase text-sm mb-2">Hubungi
+                    Saya</h2>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Mari Bekerja Sama</h1>
             </div>
 
-            <div class="grid lg:grid-cols-3 gap-10 lg:gap-16">
+            <div class="grid lg:grid-cols-5 gap-10 lg:gap-10">
 
-                <div class="lg:col-span-1 space-y-8">
-                    <p class="text-gray-600 text-justify dark:text-gray-300 leading-relaxed">
-                        Punya ide proyek menarik atau sekadar ingin menyapa? Jangan ragu untuk menghubungi saya. Saya
-                        selalu terbuka untuk diskusi tentang web development maupun data science.
+                <div class="lg:col-span-2 space-y-8">
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Punya ide proyek menarik? Jangan ragu menghubungi saya. Data ini akan masuk langsung ke database
+                        saya.
                     </p>
-
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4">
                             <div
@@ -62,7 +81,6 @@ const sendMessage = () => {
                                 <p class="text-gray-600 dark:text-gray-400">dedeahmadmaolana4@gmail.com</p>
                             </div>
                         </div>
-
                         <div class="flex items-start space-x-4">
                             <div
                                 class="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
@@ -81,7 +99,7 @@ const sendMessage = () => {
                     </div>
                 </div>
 
-                <div class="lg:col-span-2">
+                <div class="lg:col-span-3">
                     <form @submit.prevent="sendMessage"
                         class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 p-8 space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

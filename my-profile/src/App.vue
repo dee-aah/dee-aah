@@ -1,20 +1,33 @@
 <script setup>
-import { supabase } from './supabase'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import Main from '@/layouts/Main.vue'
-import Empty from '@/layouts/Empty.vue'
+
+// Import ketiga layout tadi
+import Empty from './layouts/Empty.vue'
+import Main from './layouts/Main.vue'
+import DashboardLayout from './layouts/DashboardLayout.vue'
+
 const route = useRoute()
-const layout = computed(() =>
-  route.meta.layout === 'empty' ? Empty : Main
-)
-console.log(supabase)
 
+// Mapping nama layout ke komponen aslinya
+const layouts = {
+  Empty: Empty,
+  Main: Main,
+  Dashboard: DashboardLayout
+}
 
+// Logic memilih layout
+const currentLayout = computed(() => {
+  // Ambil meta layout dari router (misal: 'Dashboard')
+  const layoutName = route.meta.layout || 'Main' // Default ke 'Main' jika tidak ada meta
+  
+  // Kembalikan komponen yang sesuai
+  return layouts[layoutName]
+})
 </script>
 
 <template>
-  <component :is="layout">
+  <component :is="currentLayout">
     <router-view />
   </component>
 </template>

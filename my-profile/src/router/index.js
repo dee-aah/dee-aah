@@ -4,6 +4,7 @@ import Register from '../views/Register.vue'
 import Dashboard from '../views/Dashboard.vue'
 import { supabase } from '../supabase'
 import { DotLottie } from '@lottiefiles/dotlottie-web';
+import Main from '../layouts/Main.vue'
 
 
 const routes = [
@@ -11,12 +12,12 @@ const routes = [
   {
     path: '/login',
     component: Login,
-    meta: { layout: 'empty' } 
+    meta: { layout: 'Empty' } 
   },
   {
     path: '/register',
     component: Register,
-    meta: { layout: 'empty' } 
+    meta: { layout: 'Empty' } 
   },
   {
     path: '/home',
@@ -28,11 +29,19 @@ const routes = [
   },
   {
     path: '/About',
-    component: () => import('@/views/About.vue')
+    component: () => import('@/views/About.vue'),
+    meta :{layout : Main}
   },
   {
     path: '/Contact',
     component: () => import('@/views/Contact.vue')
+  },{
+    path: '/dashboard',
+    component: Dashboard, 
+    meta: { 
+            requiresAuth: true,
+            layout : 'Dashboard'
+          } 
   }
 ]
 
@@ -57,6 +66,6 @@ const dotLottie = new DotLottie({
     autoplay: true,
     loop: true,
     canvas: document.querySelector('#dotlottie-canvas'),
-    src: "https://lottie.host/4db68bbd-31f6-4cd8-84eb-189de081159a/IGmMCqhzpt.lottie", // or .json file
+    src: "https://lottie.host/4db68bbd-31f6-4cd8-84eb-189de081159a/IGmMCqhzpt.lottie", 
 });
 export default router
