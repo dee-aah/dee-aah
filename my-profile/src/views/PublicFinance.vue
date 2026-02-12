@@ -98,11 +98,16 @@ const downloadPDF = () => {
 
     // Header
     doc.setFontSize(16)
-    doc.text('LAPORAN KEUANGAN PUBLIK', 105, 15, { align: 'center' })
+    doc.text('LAPORAN KEUANGAN BMKG', 105, 15, { align: 'center' })
     doc.setFontSize(10)
-    doc.text(`Total Saldo: ${formatRupiah(totalSaldo.value)}`, 105, 22, { align: 'center' })
+    doc.text(`Total Saldo Saat Ini: ${formatRupiah(totalSaldo.value)}`, 105, 22, { align: 'center' })
 
-    const tableBody = filteredTransactions.value.map((item, index) => {
+    const dataUrutLama = [...filteredTransactions.value].sort((a, b) => {
+        return new Date(a.tanggal) - new Date(b.tanggal)
+    })
+
+    // 3. Gunakan 'dataUrutLama' untuk membuat baris tabel
+    const tableBody = dataUrutLama.map((item, index) => {
         // Tandai di PDF jika menunggak
         let status = item.kategori
         if (item.kategori === 'Pinjam' && isOverdue(item.tanggal)) {
@@ -113,7 +118,7 @@ const downloadPDF = () => {
             index + 1,
             formatDate(item.tanggal),
             item.keterangan,
-            status, // Pakai status yg sudah dimodifikasi
+            status, 
             item.tipe === 'Masuk' ? formatRupiah(item.jumlah) : '-',
             item.tipe === 'Keluar' ? formatRupiah(item.jumlah) : '-'
         ]
@@ -131,7 +136,7 @@ const downloadPDF = () => {
         }
     })
 
-    doc.save(`Laporan-Keuangan-${new Date().toISOString().slice(0, 10)}.pdf`)
+    doc.save(`Laporan Keuangan BMKG ${new Date().toISOString().slice(0, 10)}.pdf`)
 }
 
 // --- LOGIKA DARK MODE ---
@@ -283,7 +288,7 @@ onMounted(() => {
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
-                                        Jatuh Tempo (> 3 Bulan)
+                                        Jatuh Tempo <span class="hidden lg:block">(> 3 Bulan)</span>
                                     </div>
 
                                 </td>

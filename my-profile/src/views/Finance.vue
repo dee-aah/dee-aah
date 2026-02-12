@@ -26,7 +26,7 @@ const form = ref({ ...defaultForm })
 // Pilihan Kategori sesuai Database
 const categories = [
   'Pinjam', 'Bayar Iuran', 'Lahiran', 'Meninggal Dunia',
-  'Kecelakaan', 'Nikahan', 'Lainnya'
+  'Kecelakaan', 'Nikahan', 'Lainnya', 'Acara BMKG'
 ]
 
 // --- FORMATTER ---
