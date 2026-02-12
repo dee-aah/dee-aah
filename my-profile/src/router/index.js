@@ -37,6 +37,14 @@ const routes = [
     path: '/Contact',
     component: () => import('@/views/Contact.vue')
   },{
+    path: '/laporan-keuangan',
+    name: 'PublicFinance',
+    component: () => import('../views/PublicFinance.vue'), // atau component: PublicFinance
+    meta: { 
+      layout: 'Empty' // <--- GANTI INI (Supaya Navbar utama hilang)
+    }
+  },
+  {
     path: '/dashboard',
     component: Dashboard, 
     meta: { 
