@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { supabase } from '../supabase'
-
+import { Vue3Lottie } from 'vue3-lottie'
 const form = ref({
     name: '',
     email: '',
@@ -64,17 +64,14 @@ const sendMessage = async () => {
 
                 <div class="lg:col-span-2 space-y-8">
                     <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        Punya ide proyek menarik? Jangan ragu menghubungi saya. Data ini akan masuk langsung ke database
-                        saya.
+                        Punya ide proyek menarik? Jangan ragu menghubungi saya.
                     </p>
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4">
                             <div
-                                class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
+                                class="flex-shrink-0 w-12 h-12 bg-[#E8F9FD] dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
+                                <Vue3Lottie animationLink="https://lottie.host/8c65f1be-54e2-4f1f-9378-23307335a2bd/R2PbECeCJD.json" :height="50"
+                                    :width="50" loop autoplay />
                             </div>
                             <div>
                                 <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Email</h4>
@@ -83,17 +80,57 @@ const sendMessage = async () => {
                         </div>
                         <div class="flex items-start space-x-4">
                             <div
-                                class="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
+                                class="flex-shrink-0 w-12 h-12 bg-red-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <Vue3Lottie animationLink="https://lottie.host/107b3851-67a5-46f0-81dc-7e328f7b0feb/5O19HLFmCy.json" :height="50"
+                                    :width="50" loop autoplay />
                             </div>
                             <div>
-                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Lokasi</h4>
-                                <p class="text-gray-600 dark:text-gray-400">Tasikmalaya, Indonesia</p>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Instagram</h4>
+                                <a href="https://www.instagram.com/dede_am4?utm_source=qr&igsh=MXR5NXh2cWtvYXNrZA=="class="text-gray-600 dark:text-gray-400">dede_am4</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-blue-300 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <Vue3Lottie animationLink="https://lottie.host/7bbeea65-8adb-4798-af1c-d4bf3b9059a7/z97To0mNmP.json" :height="50"
+                                    :width="50" loop autoplay />
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Facebook</h4>
+                                <a href="https://www.facebook.com/share/1C9SUqzzvK/"class="text-gray-600 dark:text-gray-400">シ ニ ア </a>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-[#3F3F44] dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <Vue3Lottie animationLink="https://lottie.host/4aed3850-dfb2-46d3-be40-ba65ef8cd172/ekN9pJuLOL.json" :height="50"
+                                    :width="50" loop autoplay />
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white">TikTok</h4>
+                                <a href="https://www.tiktok.com/@dee_am?_r=1&_t=ZS-93szyIo2wNt" class="text-gray-600 dark:text-gray-400">dee_am</a>
+                            </div>
+                        </div>
+                        <!-- <div class="flex items-start space-x-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <Vue3Lottie animationLink="https://lottie.host/5ef69e9f-132e-4771-aa59-27b80d67024f/UmJQiK58ZE.json" :height="50"
+                                    :width="50" loop autoplay />
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white">WhatsApp</h4>
+                                <a href="https://wa.me/qr/S2QSOXA5J4F3O1" class="text-gray-600 dark:text-gray-400">0822-1551-1904</a>
+                            </div>
+                        </div> -->
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-blue-200 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
+                                <Vue3Lottie animationLink="https://lottie.host/32375e4b-f7bd-4172-8318-c4731861dab1/FoG0vkS8xk.json" :height="50"
+                                    :width="50" loop autoplay />
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 dark:text-white">LinkedIn</h4>
+                                <a class="text-gray-600 dark:text-gray-400" href="https://www.linkedin.com/in/dede-ahmad-m-54834b302?utm_source=share_via&utm_content=profile&utm_medium=member_android">Dede Ahmad M</a>
                             </div>
                         </div>
                     </div>
